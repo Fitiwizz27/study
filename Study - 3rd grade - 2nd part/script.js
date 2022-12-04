@@ -124,7 +124,6 @@ function showShedule() {
 createDay(`Понедельник`, `monday`);
 fillDay(monday);
 addSubject(monday, 1, `Операционные системы`, `ЛР`, `224А`);
-addSubject(monday, 2, `Операционные системы`, `ЛР`, `224А`);
 addSubject(monday, 6, `Технологии и процесс разработки программного обеспечения`, `ЛК`, `BBB`);
 addSubject(monday, 7, `Технологии и процесс разработки программного обеспечения`, `ЛК`, `BBB`);
 createURLsFor(monday, `Moodle`, `#`, `VK`, `#`, `mail`, `#`);
@@ -135,18 +134,13 @@ addSubject(tuesday, 4, `Физическая культура`, `ПЗ`, `С/З`)
 createURLsFor(tuesday, `Moodle`, `#`, `VK`, `#`, `mail`, `#`);
 
 createDay(`Среда`, `wednesday`);
-fillDay(wednesday);
 
 createDay(`Четверг`, `thursday`);
-fillDay(thursday);
-addSubject(thursday, 1, `Инструментарий реализации систем искусственного интеллекта`, `ПЗ`, `123А`);
-addSubject(thursday, 2, `Инструментарий реализации систем искусственного интеллекта`, `ПЗ`, `123А`);
-createURLsFor(thursday, `Moodle`, `#`, `VK`, `#`, `mail`, `#`);
 
 createDay(`Пятница`, `friday`);
 fillDay(friday);
-addSubject(friday, 1, `Технологии и процесс разработки программного обеспечения`, `ЛР`, `308А`);
-addSubject(friday, 2, `Технологии и процесс разработки программного обеспечения`, `ЛР`, `308А`);
+addSubject(friday, 1, `Операционные системы`, `ЛР`, `224А`);
+addSubject(friday, 2, `Технологии и процесс разработки программного обеспечения`, `ЛР`, `DIS`);
 addSubject(friday, 3, `Кросс-платформенное программирование`, `ПЗ`, `209А`);
 addSubject(friday, 4, `Кросс-платформенное программирование`, `ПЗ`, `209А`);
 createURLsFor(thursday, `Moodle`, `#`, `VK`, `#`, `mail`, `#`);
@@ -159,6 +153,6 @@ addSubject(time, 3, `11:30 - 13:00`, `ПАРА`, `КАБ`);
 addSubject(time, 4, `13:20 - 14:50`, `ПАРА`, `КАБ`);
 addSubject(time, 5, `15:00 - 16:30`, `ПАРА`, `КАБ`);
 addSubject(time, 6, `16:40 - 18:10`, `ПАРА`, `КАБ`);
-addSubject(time, 7, `8:00 - 9:30`, `ПАРА`, `КАБ`);
+addSubject(time, 7, `18:00 - 19:30`, `ПАРА`, `КАБ`);
 
 showShedule();
