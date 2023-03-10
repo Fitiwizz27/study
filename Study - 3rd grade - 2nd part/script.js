@@ -120,39 +120,194 @@ function showShedule() {
     let myElement = document.querySelectorAll(`.subjectNumber`);
 }
 
+let myYear = new Date().getFullYear();
+let myMonth = new Date().getMonth();
+let myToday = new Date(myYear, myMonth, 0).getTime();
+let myNow = new Date().getTime();
+let myWeek = Math.round((myNow - myToday) / (1000 * 60 * 60 * 24 * 7));
 
-createDay(`Понедельник`, `monday`);
-fillDay(monday);
-addSubject(monday, 1, `Операционные системы`, `ЛР`, `224А`);
-addSubject(monday, 6, `Технологии и процесс разработки программного обеспечения`, `ЛК`, `BBB`);
-addSubject(monday, 7, `Технологии и процесс разработки программного обеспечения`, `ЛК`, `BBB`);
-createURLsFor(monday, `Moodle`, `#`, `VK`, `#`, `mail`, `#`);
+let weekEven;
+myWeek % 2 ? weekEven = 1 : weekEven = 0;
+console.log(weekEven);
 
-createDay(`Вторник`, `tuesday`);
-fillDay(tuesday);
-addSubject(tuesday, 4, `Физическая культура`, `ПЗ`, `С/З`);
-createURLsFor(tuesday, `Moodle`, `#`, `VK`, `#`, `mail`, `#`);
+let numberOfGroup = 0;
 
-createDay(`Среда`, `wednesday`);
+do {
+    numberOfGroup = parseInt(window.prompt(`Номер группы (1 или 2):`, 1), 10);
+} while (isNaN(numberOfGroup) || numberOfGroup > 2 || numberOfGroup < 1);
 
-createDay(`Четверг`, `thursday`);
+console.log(`Group ${numberOfGroup}`);
 
-createDay(`Пятница`, `friday`);
-fillDay(friday);
-addSubject(friday, 1, `Операционные системы`, `ЛР`, `224А`);
-addSubject(friday, 2, `Технологии и процесс разработки программного обеспечения`, `ЛР`, `DIS`);
-addSubject(friday, 3, `Кросс-платформенное программирование`, `ПЗ`, `209А`);
-addSubject(friday, 4, `Кросс-платформенное программирование`, `ПЗ`, `209А`);
-createURLsFor(thursday, `Moodle`, `#`, `VK`, `#`, `mail`, `#`);
+if (weekEven == 1) {
+    if (numberOfGroup == 1) {
+        createDay(`Понедельник`, `monday`);
+        fillDay(monday);
+        addSubject(monday, 3, `Проектирование вычислительных систем`, `ЛР`, `21А`);
+        addSubject(monday, 4, `Проектирование вычислительных систем`, `ЛР`, `21А`);
+        createURLsFor(monday, `Moodle`, `#`, `VK`, `#`, `mail`, `#`);
 
-createDay(`Время занятий`, `time`);
-fillDay(time);
-addSubject(time, 1, `8:00 - 9:30`, `ПАРА`, `КАБ`);
-addSubject(time, 2, `9:50 - 11:20`, `ПАРА`, `КАБ`);
-addSubject(time, 3, `11:30 - 13:00`, `ПАРА`, `КАБ`);
-addSubject(time, 4, `13:20 - 14:50`, `ПАРА`, `КАБ`);
-addSubject(time, 5, `15:00 - 16:30`, `ПАРА`, `КАБ`);
-addSubject(time, 6, `16:40 - 18:10`, `ПАРА`, `КАБ`);
-addSubject(time, 7, `18:00 - 19:30`, `ПАРА`, `КАБ`);
+        createDay(`Вторник`, `tuesday`);
+        fillDay(tuesday);
+        addSubject(tuesday, 4, `Физическая культура`, `ПЗ`, `С/З`);
+        createURLsFor(tuesday, `Moodle`, `#`, `VK`, `#`, `mail`, `#`);
 
-showShedule();
+        createDay(`Среда`, `wednesday`);
+        fillDay(wednesday);
+        addSubject(wednesday, 3, `Проектирование вычислительных систем`, `ЛК`, `302А`);
+        addSubject(wednesday, 4, `Проектирование вычислительных систем`, `ЛК`, `302А`);
+        addSubject(wednesday, 5, `Сети и телекоммуникации`, `ЛР`, `316А`);
+        addSubject(wednesday, 6, `Сети и телекоммуникации`, `ЛР`, `316А`);
+        createURLsFor(wednesday, `Moodle`, `#`, `VK`, `#`, `mail`, `#`);
+
+        createDay(`Четверг`, `thursday`);
+
+        createDay(`Пятница`, `friday`);
+        fillDay(friday);
+        addSubject(friday, 3, `Цифровая обработка сигналов`, `ЛК`, `309А`);
+        addSubject(friday, 4, `Цифровая обработка сигналов`, `ЛК`, `309А`);
+        addSubject(friday, 5, `Сети и телекоммуникации`, `ЛК`, `209А`);
+        createURLsFor(thursday, `Moodle`, `#`, `VK`, `#`, `mail`, `#`);
+
+        createDay(`Время занятий`, `time`);
+        fillDay(time);
+        addSubject(time, 1, `8:00 - 9:30`, `ПАРА`, `КАБ`);
+        addSubject(time, 2, `9:50 - 11:20`, `ПАРА`, `КАБ`);
+        addSubject(time, 3, `11:30 - 13:00`, `ПАРА`, `КАБ`);
+        addSubject(time, 4, `13:20 - 14:50`, `ПАРА`, `КАБ`);
+        addSubject(time, 5, `15:00 - 16:30`, `ПАРА`, `КАБ`);
+        addSubject(time, 6, `16:40 - 18:10`, `ПАРА`, `КАБ`);
+        addSubject(time, 7, `18:00 - 19:30`, `ПАРА`, `КАБ`);
+
+        showShedule();
+    } else {
+        createDay(`Понедельник`, `monday`);
+        fillDay(monday);
+        addSubject(monday, 1, `Проектирование вычислительных систем`, `ЛР`, `21А`);
+        addSubject(monday, 2, `Проектирование вычислительных систем`, `ЛР`, `21А`);
+        addSubject(monday, 3, `Сети и телекоммуникации`, `ЛР`, `316А`);
+        addSubject(monday, 4, `Сети и телекоммуникации`, `ЛР`, `316А`);
+        createURLsFor(monday, `Moodle`, `#`, `VK`, `#`, `mail`, `#`);
+
+        createDay(`Вторник`, `tuesday`);
+        fillDay(tuesday);
+        addSubject(tuesday, 4, `Физическая культура`, `ПЗ`, `С/З`);
+        createURLsFor(tuesday, `Moodle`, `#`, `VK`, `#`, `mail`, `#`);
+
+        createDay(`Среда`, `wednesday`);
+        fillDay(wednesday);
+        addSubject(wednesday, 3, `Проектирование вычислительных систем`, `ЛК`, `302А`);
+        addSubject(wednesday, 4, `Проектирование вычислительных систем`, `ЛК`, `302А`);
+        createURLsFor(wednesday, `Moodle`, `#`, `VK`, `#`, `mail`, `#`);
+
+        createDay(`Четверг`, `thursday`);
+
+        createDay(`Пятница`, `friday`);
+        fillDay(friday);
+        addSubject(friday, 3, `Цифровая обработка сигналов`, `ЛК`, `309А`);
+        addSubject(friday, 4, `Цифровая обработка сигналов`, `ЛК`, `309А`);
+        addSubject(friday, 5, `Сети и телекоммуникации`, `ЛК`, `209А`);
+        createURLsFor(thursday, `Moodle`, `#`, `VK`, `#`, `mail`, `#`);
+
+        createDay(`Время занятий`, `time`);
+        fillDay(time);
+        addSubject(time, 1, `8:00 - 9:30`, `ПАРА`, `КАБ`);
+        addSubject(time, 2, `9:50 - 11:20`, `ПАРА`, `КАБ`);
+        addSubject(time, 3, `11:30 - 13:00`, `ПАРА`, `КАБ`);
+        addSubject(time, 4, `13:20 - 14:50`, `ПАРА`, `КАБ`);
+        addSubject(time, 5, `15:00 - 16:30`, `ПАРА`, `КАБ`);
+        addSubject(time, 6, `16:40 - 18:10`, `ПАРА`, `КАБ`);
+        addSubject(time, 7, `18:00 - 19:30`, `ПАРА`, `КАБ`);
+
+        showShedule();
+    }
+} else {
+    if (numberOfGroup == 1) {
+        createDay(`Понедельник`, `monday`);
+        fillDay(monday);
+        addSubject(monday, 3, `Проектирование вычислительных систем`, `ЛР`, `21А`);
+        addSubject(monday, 4, `Проектирование вычислительных систем`, `ЛР`, `21А`);
+        createURLsFor(monday, `Moodle`, `#`, `VK`, `#`, `mail`, `#`);
+
+        createDay(`Вторник`, `tuesday`);
+        fillDay(tuesday);
+        addSubject(tuesday, 4, `Физическая культура`, `ПЗ`, `С/З`);
+        createURLsFor(tuesday, `Moodle`, `#`, `VK`, `#`, `mail`, `#`);
+
+        createDay(`Среда`, `wednesday`);
+        fillDay(wednesday);
+        addSubject(wednesday, 3, `Проектирование вычислительных систем`, `ЛК`, `302А`);
+        addSubject(wednesday, 4, `Проектирование вычислительных систем`, `ЛК`, `302А`);
+        addSubject(wednesday, 5, `Сети и телекоммуникации`, `ЛР`, `316А`);
+        addSubject(wednesday, 6, `Сети и телекоммуникации`, `ЛР`, `316А`);
+        createURLsFor(wednesday, `Moodle`, `#`, `VK`, `#`, `mail`, `#`);
+
+        createDay(`Четверг`, `thursday`);
+        fillDay(thursday);
+        addSubject(thursday, 3, `Цифровая обработка сигналов`, `ЛР`, `219А`);
+        addSubject(thursday, 4, `Цифровая обработка сигналов`, `ЛР`, `219А`);
+        createURLsFor(thursday, `Moodle`, `#`, `VK`, `#`, `mail`, `#`);
+
+        createDay(`Пятница`, `friday`);
+        fillDay(friday);
+        addSubject(friday, 3, `Цифровая обработка сигналов`, `ЛК`, `309А`);
+        addSubject(friday, 4, `Цифровая обработка сигналов`, `ЛК`, `309А`);
+        addSubject(friday, 5, `Сети и телекоммуникации`, `ЛК`, `209А`);
+        createURLsFor(thursday, `Moodle`, `#`, `VK`, `#`, `mail`, `#`);
+
+        createDay(`Время занятий`, `time`);
+        fillDay(time);
+        addSubject(time, 1, `8:00 - 9:30`, `ПАРА`, `КАБ`);
+        addSubject(time, 2, `9:50 - 11:20`, `ПАРА`, `КАБ`);
+        addSubject(time, 3, `11:30 - 13:00`, `ПАРА`, `КАБ`);
+        addSubject(time, 4, `13:20 - 14:50`, `ПАРА`, `КАБ`);
+        addSubject(time, 5, `15:00 - 16:30`, `ПАРА`, `КАБ`);
+        addSubject(time, 6, `16:40 - 18:10`, `ПАРА`, `КАБ`);
+        addSubject(time, 7, `18:00 - 19:30`, `ПАРА`, `КАБ`);
+
+        showShedule();
+    } else {
+        createDay(`Понедельник`, `monday`);
+        fillDay(monday);
+        addSubject(monday, 1, `Проектирование вычислительных систем`, `ЛР`, `21А`);
+        addSubject(monday, 2, `Проектирование вычислительных систем`, `ЛР`, `21А`);
+        addSubject(monday, 3, `Сети и телекоммуникации`, `ЛР`, `316А`);
+        addSubject(monday, 4, `Сети и телекоммуникации`, `ЛР`, `316А`);
+        createURLsFor(monday, `Moodle`, `#`, `VK`, `#`, `mail`, `#`);
+
+        createDay(`Вторник`, `tuesday`);
+        fillDay(tuesday);
+        addSubject(tuesday, 4, `Физическая культура`, `ПЗ`, `С/З`);
+        createURLsFor(tuesday, `Moodle`, `#`, `VK`, `#`, `mail`, `#`);
+
+        createDay(`Среда`, `wednesday`);
+        fillDay(wednesday);
+        addSubject(wednesday, 3, `Проектирование вычислительных систем`, `ЛК`, `302А`);
+        addSubject(wednesday, 4, `Проектирование вычислительных систем`, `ЛК`, `302А`);
+        createURLsFor(wednesday, `Moodle`, `#`, `VK`, `#`, `mail`, `#`);
+
+        createDay(`Четверг`, `thursday`);
+        fillDay(thursday);
+        addSubject(thursday, 1, `Цифровая обработка сигналов`, `ЛР`, `219А`);
+        addSubject(thursday, 2, `Цифровая обработка сигналов`, `ЛР`, `219А`);
+        createURLsFor(thursday, `Moodle`, `#`, `VK`, `#`, `mail`, `#`);
+
+        createDay(`Пятница`, `friday`);
+        fillDay(friday);
+        addSubject(friday, 3, `Цифровая обработка сигналов`, `ЛК`, `309А`);
+        addSubject(friday, 4, `Цифровая обработка сигналов`, `ЛК`, `309А`);
+        addSubject(friday, 5, `Сети и телекоммуникации`, `ЛК`, `209А`);
+        createURLsFor(thursday, `Moodle`, `#`, `VK`, `#`, `mail`, `#`);
+
+        createDay(`Время занятий`, `time`);
+        fillDay(time);
+        addSubject(time, 1, `8:00 - 9:30`, `ПАРА`, `КАБ`);
+        addSubject(time, 2, `9:50 - 11:20`, `ПАРА`, `КАБ`);
+        addSubject(time, 3, `11:30 - 13:00`, `ПАРА`, `КАБ`);
+        addSubject(time, 4, `13:20 - 14:50`, `ПАРА`, `КАБ`);
+        addSubject(time, 5, `15:00 - 16:30`, `ПАРА`, `КАБ`);
+        addSubject(time, 6, `16:40 - 18:10`, `ПАРА`, `КАБ`);
+        addSubject(time, 7, `18:00 - 19:30`, `ПАРА`, `КАБ`);
+
+        showShedule();
+    }
+}
