@@ -133,7 +133,7 @@ console.log(weekEven);
 let numberOfGroup = 0;
 
 do {
-    numberOfGroup = parseInt(window.prompt(`Номер группы (1 или 2):`, 1), 10);
+    numberOfGroup = parseInt(window.prompt(`Номер подгруппы (1 или 2):`, 1), 10);
 } while (isNaN(numberOfGroup) || numberOfGroup > 2 || numberOfGroup < 1);
 
 console.log(`Group ${numberOfGroup}`);
@@ -142,31 +142,31 @@ if (weekEven == 1) {
     if (numberOfGroup == 1) {
         createDay(`Понедельник`, `monday`);
         fillDay(monday);
-        addSubject(monday, 3, `Проектирование вычислительных систем`, `ЛР`, `21А`);
-        addSubject(monday, 4, `Проектирование вычислительных систем`, `ЛР`, `21А`);
+        addSubject(monday, 1, `Верификация, аттестация и качество программного обеспечения`, `ЛК`, `211А`);
+        addSubject(monday, 2, `Системное программное обеспечение`, `ЛК`, `211А`);
+        addSubject(monday, 3, `Системное программное обеспечение`, `ЛК`, `211А`);
+        addSubject(monday, 4, `Проектирование программного обеспечения`, `ЛК`, `211А`);
+        addSubject(monday, 5, `Проектирование программного обеспечения`, `ЛК`, `211А`);
         createURLsFor(monday, `Moodle`, `#`, `VK`, `#`, `mail`, `#`);
 
         createDay(`Вторник`, `tuesday`);
         fillDay(tuesday);
         addSubject(tuesday, 4, `Физическая культура`, `ПЗ`, `С/З`);
+        addSubject(tuesday, 5, `Проектирование программного обеспечения`, `ПЗ`, `308А`);
+        addSubject(tuesday, 6, `Проектирование программного обеспечения`, `ПЗ`, `308А`);
         createURLsFor(tuesday, `Moodle`, `#`, `VK`, `#`, `mail`, `#`);
 
         createDay(`Среда`, `wednesday`);
         fillDay(wednesday);
-        addSubject(wednesday, 3, `Проектирование вычислительных систем`, `ЛК`, `302А`);
-        addSubject(wednesday, 4, `Проектирование вычислительных систем`, `ЛК`, `302А`);
-        addSubject(wednesday, 5, `Сети и телекоммуникации`, `ЛР`, `316А`);
-        addSubject(wednesday, 6, `Сети и телекоммуникации`, `ЛР`, `316А`);
+        addSubject(wednesday, 1, `Системное программное обеспечение`, `ПЗ`, `124А`);
+        addSubject(wednesday, 2, `Системное программное обеспечение`, `ПЗ`, `124А`);
+        addSubject(wednesday, 3, `Современные технологии программирования`, `ПЗ`, `215А`);
+        addSubject(wednesday, 4, `Современные технологии программирования`, `ПЗ`, `215А`);
         createURLsFor(wednesday, `Moodle`, `#`, `VK`, `#`, `mail`, `#`);
 
         createDay(`Четверг`, `thursday`);
 
         createDay(`Пятница`, `friday`);
-        fillDay(friday);
-        addSubject(friday, 3, `Цифровая обработка сигналов`, `ЛК`, `309А`);
-        addSubject(friday, 4, `Цифровая обработка сигналов`, `ЛК`, `309А`);
-        addSubject(friday, 5, `Сети и телекоммуникации`, `ЛК`, `209А`);
-        createURLsFor(thursday, `Moodle`, `#`, `VK`, `#`, `mail`, `#`);
 
         createDay(`Время занятий`, `time`);
         fillDay(time);
@@ -182,31 +182,35 @@ if (weekEven == 1) {
     } else {
         createDay(`Понедельник`, `monday`);
         fillDay(monday);
-        addSubject(monday, 1, `Проектирование вычислительных систем`, `ЛР`, `21А`);
-        addSubject(monday, 2, `Проектирование вычислительных систем`, `ЛР`, `21А`);
-        addSubject(monday, 3, `Сети и телекоммуникации`, `ЛР`, `316А`);
-        addSubject(monday, 4, `Сети и телекоммуникации`, `ЛР`, `316А`);
+        addSubject(monday, 1, `Верификация, аттестация и качество программного обеспечения`, `ЛК`, `211А`);
+        addSubject(monday, 2, `Системное программное обеспечение`, `ЛК`, `211А`);
+        addSubject(monday, 3, `Системное программное обеспечение`, `ЛК`, `211А`);
+        addSubject(monday, 4, `Проектирование программного обеспечения`, `ЛК`, `211А`);
+        addSubject(monday, 5, `Проектирование программного обеспечения`, `ЛК`, `211А`);
         createURLsFor(monday, `Moodle`, `#`, `VK`, `#`, `mail`, `#`);
 
         createDay(`Вторник`, `tuesday`);
         fillDay(tuesday);
         addSubject(tuesday, 4, `Физическая культура`, `ПЗ`, `С/З`);
+        addSubject(tuesday, 5, `Проектирование программного обеспечения`, `ПЗ`, `308А`);
+        addSubject(tuesday, 6, `Проектирование программного обеспечения`, `ПЗ`, `308А`);
         createURLsFor(tuesday, `Moodle`, `#`, `VK`, `#`, `mail`, `#`);
 
         createDay(`Среда`, `wednesday`);
         fillDay(wednesday);
-        addSubject(wednesday, 3, `Проектирование вычислительных систем`, `ЛК`, `302А`);
-        addSubject(wednesday, 4, `Проектирование вычислительных систем`, `ЛК`, `302А`);
+        addSubject(wednesday, 1, `Верификация, аттестация и качество программного обеспечения`, `ПЗ`, `303А`);
+        addSubject(wednesday, 2, `Верификация, аттестация и качество программного обеспечения`, `ПЗ`, `303А`);
+        addSubject(wednesday, 3, `Современные технологии программирования`, `ПЗ`, `215А`);
+        addSubject(wednesday, 4, `Современные технологии программирования`, `ПЗ`, `215А`);
         createURLsFor(wednesday, `Moodle`, `#`, `VK`, `#`, `mail`, `#`);
 
         createDay(`Четверг`, `thursday`);
+        fillDay(thursday);
+        addSubject(thursday, 1, `Системное программное обеспечение`, `ПЗ`, `312В`);
+        addSubject(thursday, 2, `Системное программное обеспечение`, `ПЗ`, `312В`);
+        createURLsFor(thursday, `Moodle`, `#`, `VK`, `#`, `mail`, `#`);
 
         createDay(`Пятница`, `friday`);
-        fillDay(friday);
-        addSubject(friday, 3, `Цифровая обработка сигналов`, `ЛК`, `309А`);
-        addSubject(friday, 4, `Цифровая обработка сигналов`, `ЛК`, `309А`);
-        addSubject(friday, 5, `Сети и телекоммуникации`, `ЛК`, `209А`);
-        createURLsFor(thursday, `Moodle`, `#`, `VK`, `#`, `mail`, `#`);
 
         createDay(`Время занятий`, `time`);
         fillDay(time);
@@ -224,35 +228,33 @@ if (weekEven == 1) {
     if (numberOfGroup == 1) {
         createDay(`Понедельник`, `monday`);
         fillDay(monday);
-        addSubject(monday, 3, `Проектирование вычислительных систем`, `ЛР`, `21А`);
-        addSubject(monday, 4, `Проектирование вычислительных систем`, `ЛР`, `21А`);
+        addSubject(monday, 1, `Верификация, аттестация и качество программного обеспечения`, `ЛК`, `211А`);
+        addSubject(monday, 2, `Системное программное обеспечение`, `ЛК`, `211А`);
+        addSubject(monday, 3, `Системное программное обеспечение`, `ЛК`, `211А`);
+        addSubject(monday, 4, `Проектирование программного обеспечения`, `ЛК`, `211А`);
+        addSubject(monday, 5, `Проектирование программного обеспечения`, `ЛК`, `211А`);
         createURLsFor(monday, `Moodle`, `#`, `VK`, `#`, `mail`, `#`);
 
         createDay(`Вторник`, `tuesday`);
         fillDay(tuesday);
         addSubject(tuesday, 4, `Физическая культура`, `ПЗ`, `С/З`);
+        addSubject(tuesday, 5, `Проектирование программного обеспечения`, `ПЗ`, `308А`);
+        addSubject(tuesday, 6, `Проектирование программного обеспечения`, `ПЗ`, `308А`);
         createURLsFor(tuesday, `Moodle`, `#`, `VK`, `#`, `mail`, `#`);
 
         createDay(`Среда`, `wednesday`);
         fillDay(wednesday);
-        addSubject(wednesday, 3, `Проектирование вычислительных систем`, `ЛК`, `302А`);
-        addSubject(wednesday, 4, `Проектирование вычислительных систем`, `ЛК`, `302А`);
-        addSubject(wednesday, 5, `Сети и телекоммуникации`, `ЛР`, `316А`);
-        addSubject(wednesday, 6, `Сети и телекоммуникации`, `ЛР`, `316А`);
+        addSubject(wednesday, 1, `Верификация, аттестация и качество программного обеспечения`, `ПЗ`, `303А`);
+        addSubject(wednesday, 2, `Верификация, аттестация и качество программного обеспечения`, `ПЗ`, `303А`);
         createURLsFor(wednesday, `Moodle`, `#`, `VK`, `#`, `mail`, `#`);
 
         createDay(`Четверг`, `thursday`);
         fillDay(thursday);
-        addSubject(thursday, 3, `Цифровая обработка сигналов`, `ЛР`, `219А`);
-        addSubject(thursday, 4, `Цифровая обработка сигналов`, `ЛР`, `219А`);
+        addSubject(thursday, 1, `Системное программное обеспечение`, `ПЗ`, `219А`);
+        addSubject(thursday, 2, `Системное программное обеспечение`, `ПЗ`, `312В`);
         createURLsFor(thursday, `Moodle`, `#`, `VK`, `#`, `mail`, `#`);
 
         createDay(`Пятница`, `friday`);
-        fillDay(friday);
-        addSubject(friday, 3, `Цифровая обработка сигналов`, `ЛК`, `309А`);
-        addSubject(friday, 4, `Цифровая обработка сигналов`, `ЛК`, `309А`);
-        addSubject(friday, 5, `Сети и телекоммуникации`, `ЛК`, `209А`);
-        createURLsFor(thursday, `Moodle`, `#`, `VK`, `#`, `mail`, `#`);
 
         createDay(`Время занятий`, `time`);
         fillDay(time);
@@ -268,35 +270,29 @@ if (weekEven == 1) {
     } else {
         createDay(`Понедельник`, `monday`);
         fillDay(monday);
-        addSubject(monday, 1, `Проектирование вычислительных систем`, `ЛР`, `21А`);
-        addSubject(monday, 2, `Проектирование вычислительных систем`, `ЛР`, `21А`);
-        addSubject(monday, 3, `Сети и телекоммуникации`, `ЛР`, `316А`);
-        addSubject(monday, 4, `Сети и телекоммуникации`, `ЛР`, `316А`);
+        addSubject(monday, 1, `Верификация, аттестация и качество программного обеспечения`, `ЛК`, `211А`);
+        addSubject(monday, 2, `Системное программное обеспечение`, `ЛК`, `211А`);
+        addSubject(monday, 3, `Системное программное обеспечение`, `ЛК`, `211А`);
+        addSubject(monday, 4, `Проектирование программного обеспечения`, `ЛК`, `211А`);
+        addSubject(monday, 5, `Проектирование программного обеспечения`, `ЛК`, `211А`);
         createURLsFor(monday, `Moodle`, `#`, `VK`, `#`, `mail`, `#`);
 
         createDay(`Вторник`, `tuesday`);
         fillDay(tuesday);
         addSubject(tuesday, 4, `Физическая культура`, `ПЗ`, `С/З`);
+        addSubject(tuesday, 5, `Проектирование программного обеспечения`, `ПЗ`, `308А`);
+        addSubject(tuesday, 6, `Проектирование программного обеспечения`, `ПЗ`, `308А`);
         createURLsFor(tuesday, `Moodle`, `#`, `VK`, `#`, `mail`, `#`);
 
         createDay(`Среда`, `wednesday`);
         fillDay(wednesday);
-        addSubject(wednesday, 3, `Проектирование вычислительных систем`, `ЛК`, `302А`);
-        addSubject(wednesday, 4, `Проектирование вычислительных систем`, `ЛК`, `302А`);
+        addSubject(wednesday, 1, `Системное программное обеспечение`, `ПЗ`, `124А`);
+        addSubject(wednesday, 2, `Системное программное обеспечение`, `ПЗ`, `124А`);
         createURLsFor(wednesday, `Moodle`, `#`, `VK`, `#`, `mail`, `#`);
 
         createDay(`Четверг`, `thursday`);
-        fillDay(thursday);
-        addSubject(thursday, 1, `Цифровая обработка сигналов`, `ЛР`, `219А`);
-        addSubject(thursday, 2, `Цифровая обработка сигналов`, `ЛР`, `219А`);
-        createURLsFor(thursday, `Moodle`, `#`, `VK`, `#`, `mail`, `#`);
 
         createDay(`Пятница`, `friday`);
-        fillDay(friday);
-        addSubject(friday, 3, `Цифровая обработка сигналов`, `ЛК`, `309А`);
-        addSubject(friday, 4, `Цифровая обработка сигналов`, `ЛК`, `309А`);
-        addSubject(friday, 5, `Сети и телекоммуникации`, `ЛК`, `209А`);
-        createURLsFor(thursday, `Moodle`, `#`, `VK`, `#`, `mail`, `#`);
 
         createDay(`Время занятий`, `time`);
         fillDay(time);
