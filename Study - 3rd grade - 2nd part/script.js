@@ -138,7 +138,7 @@ do {
 
 console.log(`Group ${numberOfGroup}`);
 
-if (weekEven == 1) {
+if (weekEven == 0) {
     if (numberOfGroup == 1) {
         createDay(`Понедельник`, `monday`);
         fillDay(monday);
